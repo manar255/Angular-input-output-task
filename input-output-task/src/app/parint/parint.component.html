@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-around">
+  <h1>initial : {{i}}</h1>
+  <h1>multiply :{{m}} </h1>
+</div>
+<div class="d-flex justify-content-center">
+  @for (a of arr; track a ){
+    <app-child [value]="a*i"  (iValue)="receiveData($event)"></app-child>
+
+  }
+</div>
+<app-s-child [value]="m" ></app-s-child>
+
